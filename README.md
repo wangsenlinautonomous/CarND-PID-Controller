@@ -11,12 +11,26 @@ Partical filter mainly contains the following four steps:
 
 ## P Controller
 
+P, or "proportional", component had the most directly observable effect on the car’s behaviour. It causes the car to steer proportional (and opposite) to the car’s distance from the lane center(CTE) - if the car is far to the right it steers hard to the left, if it’s slightly to the left it steers slightly to the right.It sets the steering angle in proportion to CTE with a proportional factor tau.
 
+```
+-tau * cte
+```
 
 <img src="https://user-images.githubusercontent.com/40875720/52987012-81ac3080-3434-11e9-9316-49692975eca4.PNG" width="600">
 
 ## PD Controller
 
+P controller can help to reduce the error very quickly, but it can easily cause overshoot(like the below pic shows).In this case, PD controller can be a good solution.
+Basically, PD controller also consider derivative of the error. When the error is approach to zero, the D component(differentila) will be smaller, then the output of the PD controller will be smaller. By using this method, it can help to reduce the overshoot
+
+```
+diff_cte = cte - prev_cte
+prev_cte = cte
+- tau_d * diff_cte
+```
+
+<img src="https://user-images.githubusercontent.com/40875720/52987698-31829d80-3437-11e9-9a7d-f07ffcbd9a72.PNG" width="600">
 <img src="https://user-images.githubusercontent.com/40875720/52987020-8bce2f00-3434-11e9-94dc-f8f0f3c48739.PNG" width="600">
 
 ## PID Controller
