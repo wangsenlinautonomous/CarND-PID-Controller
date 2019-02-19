@@ -34,6 +34,9 @@ prev_cte = cte
 <img src="https://user-images.githubusercontent.com/40875720/52987020-8bce2f00-3434-11e9-94dc-f8f0f3c48739.PNG" width="600">
 
 ## PID Controller
+In most of cases, PD controller is good enough, but in some cases(like steering drift(steering bias)) constant bias may happen. In these special cases, PID controller can help. I means integgral of the sum of error to deal with systematic biases.
+
+In other words, the I, or "integral", component counteracts a bias in the CTE which prevents the P-D controller from reaching the center line. This bias can take several forms, such as a steering drift , but I believe that in this particular implementation the I component particularly serves to reduce the CTE around curves.
 
 <img src="https://user-images.githubusercontent.com/40875720/52987028-94266a00-3434-11e9-8de1-5ee8f9501006.PNG" width="600">
 <img src="https://user-images.githubusercontent.com/40875720/52987040-9d173b80-3434-11e9-802c-58eefb29b29e.PNG" width="600">
