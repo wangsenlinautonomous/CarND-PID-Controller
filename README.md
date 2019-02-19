@@ -1,12 +1,28 @@
 # CarND-PID-Controller
 ## Overview
 Partical filter mainly contains the following four steps:
-* Initialization
-* Prediction
-* WeightUpdate
-* Resample
+* P Controller
+* PD Controller
+* PID Controller
+* Twiddle
+* Implemetaion in C++
 
 ---
+
+## P Controller
+
+
+
+<img src="https://user-images.githubusercontent.com/40875720/52987012-81ac3080-3434-11e9-9316-49692975eca4.PNG" width="600">
+
+## PD Controller
+
+<img src="https://user-images.githubusercontent.com/40875720/52987020-8bce2f00-3434-11e9-94dc-f8f0f3c48739.PNG" width="600">
+
+## PID Controller
+
+<img src="https://user-images.githubusercontent.com/40875720/52987028-94266a00-3434-11e9-8de1-5ee8f9501006.PNG" width="600">
+<img src="https://user-images.githubusercontent.com/40875720/52987040-9d173b80-3434-11e9-802c-58eefb29b29e.PNG" width="600">
 
 ## Dependencies
 
